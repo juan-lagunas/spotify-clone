@@ -35,7 +35,7 @@ const Sidebar: React.FC<SidebarProps> = ({ children }) => {
     <div className="flex flex-col h-full gap-2 md:p-2">
       <div className="flex overflow-auto h-full">
         <div className="hidden md:flex flex-col gap-y-2 w-[30%] max-w-[370px] pr-2">
-          <div className="bg-[#121212] rounded-lg h-fit w-full flex flex-col gap-y-4 px-5 py-4">
+          <div className="bg-[#121212] rounded-lg h-fit w-full flex flex-col gap-y-4 px-6 py-3">
             <Link
               key={routes[0].label}
               {...routes[0]}

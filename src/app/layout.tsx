@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={twMerge(`select-none`, font.className)}>{children}</body>
+      <body className={twMerge(`select-none box-border`, font.className)}>{children}</body>
     </html>
   )
 }

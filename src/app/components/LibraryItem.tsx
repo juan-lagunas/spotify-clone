@@ -20,22 +20,22 @@ const LibraryItem: React.FC<LibraryItemProps> = ({
   return (
     <div
       className={twMerge(
-        `h-14 hover:bg-[#242424] rounded flex items-center gap-2 px-2 font-semibold overflow-hidden`,
+        `h-16 hover:bg-[#242424] rounded-md flex items-center gap-2 p-2 font-semibold overflow-hidden transition`,
         className
       )}
     >
-      <div className="relative h-12 aspect-square">
+      <div className="relative h-full aspect-square shadow-[0_4px_60px_rgba(0,0,0,.5)]">
         <Image fill alt="Library Item" src={src} className="rounded" />
       </div>
       {playlist ? (
-        <div className="grid grid-flow-row gap-1">
+        <div className="grid grid-flow-row gap-0.5">
           <div className="text-[1rem] truncate">{playlist}</div>
           <div className="text-[#a7a7a7] text-[0.875rem] truncate">
             Playlist • {user}
           </div>
         </div>
       ) : (
-        <div className="grid grid-flow-row gap-1">
+        <div className="grid grid-flow-row gap-0.5">
           <div className="text-[1rem] truncate">{album}</div>
           <div className="text-[#a7a7a7] text-[0.875rem] truncate">
             Album • {user}
