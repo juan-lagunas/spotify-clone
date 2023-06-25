@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import Image from "next/image"
+import LibraryItem from "./LibraryItem"
 
 import { useRouter } from "next/navigation"
 import { twMerge } from "tailwind-merge"
@@ -65,16 +65,14 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
         </div>
 
         {/* Not logged in buttons */}
-        <div className="hidden md:flex justify-between itmes-center gap-x-4">
-          <Link
-            href="/login"
-            className="bg-white py-2 px-4 rounded-full text-black font-bold hover:opacity-80 transition"
-          >
-            Log in
-          </Link>
-        </div>
+        <Link
+          href="/login"
+          className="max-md:hidden bg-white py-2 px-4 rounded-full text-black font-bold hover:opacity-80 transition"
+        >
+          Log in
+        </Link>
 
-        {/* mdall screen nav */}
+        {/* Mobile header */}
         <div className="md:hidden w-full flex flex-col gap-4">
           <div className="flex justify-between items-center">
             <div className="text-2xl font-bold md:hidden">Welcome</div>
@@ -83,18 +81,8 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
             </button>
           </div>
           <div className="flex gap-2 font-semibold text-sm">
-            <div className="h-14 w-full bg-[#242424] rounded flex items-center gap-2 overflow-hidden shadow-lg">
-              <div className="relative h-full aspect-square bg-black">
-                <Image fill alt="artist" src="/images/lord.jpg" />
-              </div>
-              <div>Lord Huron</div>
-            </div>
-            <div className="h-14 w-full bg-[#242424] rounded flex items-center gap-2 overflow-hidden shadow-lg">
-              <div className="relative h-full aspect-square bg-black">
-                <Image fill alt="artist" src="/images/moody.jpg" />
-              </div>
-              <div>Moody Mix</div>
-            </div>
+            <LibraryItem src='/images/moody.jpg' playlist="Moody Mix" className='bg-[#242424]'/>
+            <LibraryItem src="/images/lord.jpg" artist="Lord Huron" className='bg-[#242424]'/>
           </div>
         </div>
       </div>
