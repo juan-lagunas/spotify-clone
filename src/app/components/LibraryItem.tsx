@@ -1,5 +1,6 @@
 import Image from "next/image"
 
+import { useRouter } from "next/navigation"
 import { twMerge } from "tailwind-merge"
 
 interface LibraryItemProps {
@@ -9,6 +10,7 @@ interface LibraryItemProps {
   artist?: string
   user?: string
   src: string
+  href: string
 }
 
 const LibraryItem: React.FC<LibraryItemProps> = ({
@@ -18,11 +20,14 @@ const LibraryItem: React.FC<LibraryItemProps> = ({
   artist,
   user,
   src,
+  href,
 }) => {
+  const router = useRouter()
   return (
     <div
+      onClick={() => router.push(href)}
       className={twMerge(
-        `h-16 hover:bg-[#242424] rounded-md flex flex-1 items-center gap-2 p-2 font-semibold overflow-hidden transition`,
+        `h-16 w-full hover:bg-[#242424] rounded-md flex items-center gap-2 p-2 font-semibold overflow-hidden transition`,
         className
       )}
     >
@@ -30,7 +35,7 @@ const LibraryItem: React.FC<LibraryItemProps> = ({
         <Image fill alt="Library Item" src={src} className="rounded" />
       </div>
       {playlist ? (
-        <div className="grid grid-flow-row gap-0.5">
+        <div className="grid grid-flow-row gap-0.5 text-left">
           <div className="text-[1rem] truncate">{playlist}</div>
           <div className="text-[#a7a7a7] text-[0.875rem] truncate max-md:hidden">
             Playlist • {user}
@@ -38,7 +43,7 @@ const LibraryItem: React.FC<LibraryItemProps> = ({
         </div>
       ) : null}
       {album ? (
-        <div className="grid grid-flow-row gap-0.5">
+        <div className="grid grid-flow-row gap-0.5 text-left">
           <div className="text-[1rem] truncate">{album}</div>
           <div className="text-[#a7a7a7] text-[0.875rem] truncate max-md:hidden">
             Album • {user}

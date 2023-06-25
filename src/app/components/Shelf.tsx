@@ -1,5 +1,6 @@
-import Link from "next/link"
+"use client"
 
+import Link from "next/link"
 import Card from "./Card"
 
 const Shelf = () => {
@@ -20,15 +21,60 @@ const Shelf = () => {
         </Link>
       </div>
       <div className="px-2 md:px-6 grid grid-flow-col auto-cols-min md:gap-6 overflow-x-scroll">
-        <Card src='/images/strange.jpg' album='Strange Trails' user='Lord Huron' />
-        <Card src='/images/strange.jpg' album='Strange Trails' user='Lord Huron' />
-        <Card src='/images/strange.jpg' album='Strange Trails' user='Lord Huron' />
-        <Card src='/images/strange.jpg' album='Strange Trails' user='Lord Huron' />
-        <Card src='/images/strange.jpg' album='Strange Trails' user='Lord Huron' />
-        <Card src='/images/strange.jpg' album='Strange Trails' user='Lord Huron' />
-        <Card src='/images/strange.jpg' album='Strange Trails' user='Lord Huron' />
-        <Card src='/images/strange.jpg' album='Strange Trails' user='Lord Huron' />
-        <Card src='/images/strange.jpg' album='Strange Trails' user='Lord Huron' />
+        <Card
+          href="/"
+          src="/images/strange.jpg"
+          album="Strange Trails"
+          user="Lord Huron"
+        />
+        <Card
+          href="/"
+          src="/images/strange.jpg"
+          album="Strange Trails"
+          user="Lord Huron"
+        />
+        <Card
+          href="/"
+          src="/images/strange.jpg"
+          album="Strange Trails"
+          user="Lord Huron"
+        />
+        <Card
+          href="/"
+          src="/images/strange.jpg"
+          album="Strange Trails"
+          user="Lord Huron"
+        />
+        <Card
+          href="/"
+          src="/images/strange.jpg"
+          album="Strange Trails"
+          user="Lord Huron"
+        />
+        <Card
+          href="/"
+          src="/images/strange.jpg"
+          album="Strange Trails"
+          user="Lord Huron"
+        />
+        <Card
+          href="/"
+          src="/images/strange.jpg"
+          album="Strange Trails"
+          user="Lord Huron"
+        />
+        <Card
+          href="/"
+          src="/images/strange.jpg"
+          album="Strange Trails"
+          user="Lord Huron"
+        />
+        <Card
+          href="/"
+          src="/images/strange.jpg"
+          album="Strange Trails"
+          user="Lord Huron"
+        />
       </div>
     </div>
   )

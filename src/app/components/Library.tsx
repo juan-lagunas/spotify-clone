@@ -22,71 +22,85 @@ const Library = () => {
       </div>
       <div className="space-y-2 px-3">
         <LibraryItem
+          href="/"
           src="/images/strange.jpg"
           album="Strange Trails"
           user="Lord Huron"
         />
         <LibraryItem
+          href="/"
           src="/images/strange.jpg"
           album="Strange Trails"
           user="Lord Huron"
         />
         <LibraryItem
+          href="/"
           src="/images/strange.jpg"
           album="Strange Trails"
           user="Lord Huron"
         />
         <LibraryItem
+          href="/"
           src="/images/strange.jpg"
           album="Strange Trails"
           user="Lord Huron"
         />
         <LibraryItem
+          href="/"
           src="/images/strange.jpg"
           album="Strange Trails"
           user="Lord Huron"
         />
         <LibraryItem
+          href="/"
           src="/images/strange.jpg"
           album="Strange Trails"
           user="Lord Huron"
         />
         <LibraryItem
+          href="/"
           src="/images/strange.jpg"
           album="Strange Trails"
           user="Lord Huron"
         />
         <LibraryItem
+          href="/"
           src="/images/strange.jpg"
           album="Strange Trails"
           user="Lord Huron"
         />
         <LibraryItem
+          href="/"
           src="/images/strange.jpg"
           album="Strange Trails"
           user="Lord Huron"
         />
         <LibraryItem
+          href="/"
           src="/images/strange.jpg"
           album="Strange Trails"
           user="Lord Huron"
         />
         <LibraryItem
+          href="/"
           src="/images/strange.jpg"
           album="Strange Trails"
           user="Lord Huron"
         />
         <LibraryItem
+          href="/"
           src="/images/strange.jpg"
           album="Strange Trails"
           user="Lord Huron"
         />
         <LibraryItem
+          href="/"
           src="/images/strange.jpg"
           album="Strange Trails"
           user="Lord Huron"
         />
         <LibraryItem
+          href="/"
           src="/images/strange.jpg"
           album="Strange Trails"
           user="Lord Huron"

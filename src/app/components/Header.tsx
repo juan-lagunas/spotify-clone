@@ -5,7 +5,6 @@ import LibraryItem from "./LibraryItem"
 
 import { useRouter } from "next/navigation"
 import { twMerge } from "tailwind-merge"
-
 import { Settings, NavigateBefore, NavigateNext } from "@mui/icons-material"
 
 interface HeaderProps {

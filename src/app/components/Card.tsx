@@ -1,17 +1,20 @@
 import Image from "next/image"
 import CardButton from "./CardButton"
-import { Album } from "@mui/icons-material"
+import { useRouter } from "next/navigation"
 
-type CardProps = {
+interface CardProps {
   src: string
   album?: string
   playlist?: string
   user: string
+  href: string
 }
 
-const Card: React.FC<CardProps> = ({ src, album, playlist, user }) => {
+const Card: React.FC<CardProps> = ({ src, album, playlist, user, href }) => {
+  const router = useRouter()
   return (
     <div
+      onClick={() => router.push(href)}
       className="
           relative
           w-[168px]
@@ -21,7 +24,6 @@ const Card: React.FC<CardProps> = ({ src, album, playlist, user }) => {
           rounded-md
           p-2
           md:p-4
-          cursor-pointer
           hover:bg-[#282828]
           transition
           group
@@ -37,30 +39,12 @@ const Card: React.FC<CardProps> = ({ src, album, playlist, user }) => {
         <CardButton />
       </div>
 
-      {playlist ? (
-        <>
-          <div className="font-bold pb-1">{playlist}</div>
-          <div className="text-sm font-[500] line-clamp-2 text-[#a7a7a7]">
-            {user}
-          </div>
-        </>
-      ) : (
-        <>
-          <div className="font-bold pb-1">{album}</div>
-          <div className="text-sm font-[500] line-clamp-2 text-[#a7a7a7]">
-            {user}
-            {user}
-
-            {user}
-
-            {user}
-            {user}
-
-            {user}
-            {user}
-          </div>
-        </>
-      )}
+      <div className="font-bold pb-1">
+        {playlist ? <span>{playlist}</span> : <span>{album}</span>}
+      </div>
+      <div className="text-sm font-[500] line-clamp-2 text-[#a7a7a7]">
+        {user}
+      </div>
     </div>
   )
 }
