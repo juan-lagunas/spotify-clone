@@ -15,9 +15,8 @@ const Card: React.FC<CardProps> = ({ src, album, playlist, user }) => {
       className="
           relative
           w-[168px]
-          h-[220px]
+          h-min
           md:w-[200px]
-          md:h-min
           md:bg-[#181818]
           rounded-md
           p-2
