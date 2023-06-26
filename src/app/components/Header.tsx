@@ -80,8 +80,18 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
             </button>
           </div>
           <div className="flex gap-2 font-semibold text-sm">
-            <LibraryItem src='/images/moody.jpg' playlist="Moody Mix" className='bg-[#242424]'/>
-            <LibraryItem src="/images/lord.jpg" artist="Lord Huron" className='bg-[#242424]'/>
+            <LibraryItem
+              href="/"
+              src="/images/moody.jpg"
+              playlist="Moody Mix"
+              className="bg-[#242424]"
+            />
+            <LibraryItem
+              href="/"
+              src="/images/lord.jpg"
+              artist="Lord Huron"
+              className="bg-[#242424]"
+            />
           </div>
         </div>
       </div>

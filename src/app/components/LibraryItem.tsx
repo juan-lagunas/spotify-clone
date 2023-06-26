@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 
 import { useRouter } from "next/navigation"
 import { twMerge } from "tailwind-merge"
@@ -24,8 +25,8 @@ const LibraryItem: React.FC<LibraryItemProps> = ({
 }) => {
   const router = useRouter()
   return (
-    <div
-      onClick={() => router.push(href)}
+    <Link
+      href={href}
       className={twMerge(
         `h-16 w-full hover:bg-[#242424] rounded-md flex items-center gap-2 p-2 font-semibold overflow-hidden transition`,
         className
@@ -51,7 +52,7 @@ const LibraryItem: React.FC<LibraryItemProps> = ({
         </div>
       ) : null}
       {artist ? <div className="text-[1rem] truncate">{artist}</div> : null}
-    </div>
+    </Link>
   )
 }
 

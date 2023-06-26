@@ -1,6 +1,9 @@
 import Image from "next/image"
-import CardButton from "./CardButton"
+import Link from "next/link"
 import { useRouter } from "next/navigation"
+
+import CardButton from "./CardButton"
+
 
 interface CardProps {
   src: string
@@ -13,8 +16,8 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ src, album, playlist, user, href }) => {
   const router = useRouter()
   return (
-    <div
-      onClick={() => router.push(href)}
+    <Link
+      href={href}
       className="
           relative
           w-[168px]
@@ -45,7 +48,7 @@ const Card: React.FC<CardProps> = ({ src, album, playlist, user, href }) => {
       <div className="text-sm font-[500] line-clamp-2 text-[#a7a7a7]">
         {user}
       </div>
-    </div>
+    </Link>
   )
 }
 
