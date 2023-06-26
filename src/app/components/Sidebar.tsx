@@ -1,11 +1,9 @@
 "use client"
 
-import { usePathname } from "next/navigation"
 import { useMemo } from "react"
-import { Home, Search } from "@mui/icons-material"
-import { twMerge } from "tailwind-merge"
+import { usePathname } from "next/navigation"
 
-import Link from "next/link"
+import SidebarItem from './SidebarItem'
 import Library from "./Library"
 import MobileNav from "./MobileNav"
 import Playing from "./Playing"
@@ -36,30 +34,9 @@ const Sidebar: React.FC<SidebarProps> = ({ children }) => {
       <div className="flex overflow-auto h-full">
         <div className="hidden md:flex flex-col gap-y-2 w-[30%] max-w-[370px] pr-2">
           <div className="bg-[#121212] rounded-lg h-fit w-full flex flex-col gap-y-4 px-6 py-3">
-            <Link
-              key={routes[0].label}
-              {...routes[0]}
-              href={routes[0].href}
-              className={twMerge(
-                `flex flex-row h-fit items-center w-full gap-x-4 text-md font-bold cursor-pointer hover:text-white transition text-zinc-400  py-1`,
-                routes[0].active && "text-white"
-              )}
-            >
-              <Home />
-              <p className="truncate w-full">{routes[0].label}</p>
-            </Link>
-            <Link
-              key={routes[1].label}
-              {...routes[1]}
-              href={routes[1].href}
-              className={twMerge(
-                `flex flex-row h-fit items-center w-full gap-x-4 text-md font-bold cursor-pointer hover:text-white transition text-zinc-400  py-1`,
-                routes[1].active && "text-white"
-              )}
-            >
-              <Search />
-              <p className="truncate w-full">{routes[1].label}</p>
-            </Link>
+            {routes.map((item) => (
+              <SidebarItem key={item.label} {...item} />
+            ))}
           </div>
           <div className="h-full w-full bg-[#121212] rounded-lg overflow-y-auto ">
             <Library />
